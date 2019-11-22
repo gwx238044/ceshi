@@ -29,6 +29,12 @@ public class RentCtroller {
 	@Autowired
 	private LoginService loginService;
 
+	/**
+	 * 查询图书
+	 * @param token
+	 * @param dto
+	 * @return
+	 */
 	@GetMapping("query")
 	@ResponseBody
 	public HttpResponse<List<BookVO>> getDetailById(@RequestHeader(name = "token") String token, QueryDTO dto) {
